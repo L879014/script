@@ -1,142 +1,71 @@
 _G.Key = "IRON-RSSTVYZTZZ"
 local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
-local Hwid = {
-    [1] = "89B6153E-A05D-49C0-8361-D043E4524556",
-    ["89B6153E-A05D-49C0-8361-D043E4524556"] = 1,
-    [2] = "",
-    [""] = 2,
-    [3] = "",
-    [""] = 3,
-    [4] = "",
-    [""] = 4,
-    [5] = "",
-    [""] = 5,
-    [6] = "",
-    [""] = 6,
-    [7] = "",
-    [""] = 7,
-    [8] = "",
-    [""] = 8,
-    [9] = "",
-    [""] = 9,
-    [10] = "",
-    [""] = 10,
-}
 local Key = {
     [1] = "IRON-TTZXTYUUYT",
-    [2] = "IRON-YSZXZXSSTX",
-    [3] = "IRON-RSSTVYZTZZ",
-    [4] = "IRON-XUQSPPPQPT",
-    [5] = "IRON-YQXRUPWPPZ",
-    [6] = "IRON-YTRYUVSSUR",
-    [7] = "IRON-XURQTRVRPV",
-    [8] = "IRON-WYSZSUWUXQ",
-    [9] = "IRON-YRTZSSRWXX",
-    [10] = "IRON-ZYZSRYPTYX",
 }
-local KeyNumber = Hwid[ClientId]
-if Hwid[1] == ClientId then
 if Key[1] == _G.Key then
     print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
-end
+    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/L879014/script/main/UI"))()
+local iron = library.new("IRON", 5013109572)
 
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
 
-if Hwid[2] == ClientId then
-if Key[2] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
-end
+-- first page
+local page = iron:addPage("IRON", 5012544693)
+local section1 = page:addSection("Section 1")
+local section2 = page:addSection("Section 2")
 
+section1:addToggle("Toggle", nil, function(value)
+print("Toggled", value)
+end)
+section1:addButton("Button", function()
+print("Clicked")
+end)
+section1:addTextbox("Notification", "Default", function(value, focusLost)
+print("Input", value)
 
-if Hwid[3] == ClientId then
-if Key[3] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
+if focusLost then
+iron:Notify("Title", value)
 end
-else
-    print("incorrect Hwid")
-end
+end)
 
+section2:addKeybind("Toggle Keybind", Enum.KeyCode.RightControl, function()
+print("Activated Keybind")
+iron:toggle()
+end, function()
+print("Changed Keybind")
+end)
+section2:addColorPicker("ColorPicker", Color3.fromRGB(50, 50, 50))
+section2:addColorPicker("ColorPicker2")
+section2:addSlider("Slider", 0, -100, 100, function(value)
+print("Dragged", value)
+end)
+section2:addDropdown("Dropdown", {"Hello", "World", "Hello World", "Word", 1, 2, 3})
+section2:addDropdown("Dropdown", {"Hello", "World", "Hello World", "Word", 1, 2, 3}, function(text)
+print("Selected", text)
+end)
+section2:addButton("Button")
 
-if Hwid[4] == ClientId then
-if Key[4] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
-end
+-- second page
+local theme = iron:addPage("Theme", 5012544693)
+local colors = theme:addSection("Colors")
 
-
-if Hwid[5] == ClientId then
-if Key[5] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
-end
-
-
-if Hwid[6] == ClientId then
-if Key[6] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
+for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+colors:addColorPicker(theme, color, function(color3)
+iron:setTheme(theme, color3)
+end)
 end
 
-
-if Hwid[7] == ClientId then
-if Key[7] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
-end
-
-
-if Hwid[8] == ClientId then
-if Key[8] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
-end
-
-
-if Hwid[9] == ClientId then
-if Key[9] == _G.Key then
-    print("script")
-else
-    print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
-end
-
-
-if Hwid[10] == ClientId then
-if Key[10] == _G.Key then
-    print("script")
+-- load
+iron:SelectPage(iron.pages[1], true)
 else
     print("incorrect Key")
 end
