@@ -1,5 +1,4 @@
-_G.Key = "IRON-RSSTVYZTZZ"
-local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
+_G.Key = "IRON-TTZXTYUUYT"
 local Key = {
     [1] = "IRON-TTZXTYUUYT",
 }
@@ -68,7 +67,4 @@ end
 iron:SelectPage(iron.pages[1], true)
 else
     print("incorrect Key")
-end
-else
-    print("incorrect Hwid")
 end
