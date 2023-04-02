@@ -1,0 +1,144 @@
+local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
+local Hwid = {
+    [1] = "89B6153E-A05D-49C0-8361-D043E4524556",
+    ["89B6153E-A05D-49C0-8361-D043E4524556"] = 1,
+    [2] = "",
+    [""] = 2,
+    [3] = "",
+    [""] = 3,
+    [4] = "",
+    [""] = 4,
+    [5] = "",
+    [""] = 5,
+    [6] = "",
+    [""] = 6,
+    [7] = "",
+    [""] = 7,
+    [8] = "",
+    [""] = 8,
+    [9] = "",
+    [""] = 9,
+    [10] = "",
+    [""] = 10,
+}
+local Key = {
+    [1] = "IRON-TTZXTYUUYT",
+    [2] = "IRON-YSZXZXSSTX",
+    [3] = "IRON-RSSTVYZTZZ",
+    [4] = "IRON-XUQSPPPQPT",
+    [5] = "IRON-YQXRUPWPPZ",
+    [6] = "IRON-YTRYUVSSUR",
+    [7] = "IRON-XURQTRVRPV",
+    [8] = "IRON-WYSZSUWUXQ",
+    [9] = "IRON-YRTZSSRWXX",
+    [10] = "IRON-ZYZSRYPTYX",
+}
+local KeyNumber = Hwid[ClientId]
+if Hwid[1] == ClientId then
+if Key[1] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[2] == ClientId then
+if Key[2] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[3] == ClientId then
+if Key[3] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[4] == ClientId then
+if Key[4] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[5] == ClientId then
+if Key[5] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[6] == ClientId then
+if Key[6] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[7] == ClientId then
+if Key[7] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[8] == ClientId then
+if Key[8] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[9] == ClientId then
+if Key[9] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
+
+
+if Hwid[10] == ClientId then
+if Key[10] == _G.Key then
+    print("script")
+else
+    print("incorrect Key")
+end
+else
+    print("incorrect Hwid")
+end
