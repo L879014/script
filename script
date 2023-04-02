@@ -1,3 +1,4 @@
+_G.Key = "IRON-RSSTVYZTZZ"
 local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
 local Hwid = {
     [1] = "89B6153E-A05D-49C0-8361-D043E4524556",
